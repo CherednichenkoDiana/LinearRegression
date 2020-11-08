@@ -12,7 +12,7 @@ public class ReadingFile
     public static double[] y_real = new double[m];
     public static void read() throws FileNotFoundException
     {
-        File file = new File("D:\\Универ\\4 курс 1 семестр\\ИХиИАС\\Лабораторная 1\\test.txt");
+        File file = new File("C:\\Users\\allis\\IdeaProjects\\lab1\\src\\test.TXT");
         Scanner scanner = new Scanner(file);
         int j=-1;
         while (scanner.hasNextLine())
