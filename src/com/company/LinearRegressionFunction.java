@@ -105,9 +105,11 @@ public class LinearRegressionFunction
         //menu
         Scanner in= new Scanner(System.in);
         boolean flag=true;
-        while (flag==true) {
+        while (flag==true)
+        {
             System.out.println("1 - Обнуление регресии, 2 - Обучение регресии, 3 - Ввести данные для проверки, 4 - Изменить количество циклов обучения, 5 - Изменить alpha, 6 - Коректность существующей регрессии, 0 - Выход");
-            switch (in.nextInt()) {
+            switch (in.nextInt())
+            {
                 case 0:
                     flag = false;
                     break;
@@ -121,12 +123,37 @@ public class LinearRegressionFunction
                     break;
                 case 3:
                     double[] data= new double[n];
-                    System.out.println("введите");
-
                     for (int i=0; i<n;i++){
+                        switch (i)
+                        {
+                            case 0:
+                                System.out.println("Беременность");
+                                break;
+                            case 1:
+                                System.out.println("Глюкоза");
+                                break;
+                            case 2:
+                                System.out.println("АД");
+                                break;
+                            case 3:
+                                System.out.println("Толщина КС");
+                                break;
+                            case 4:
+                                System.out.println("Инсулин");
+                                break;
+                            case 5:
+                                System.out.println("ИМТ");
+                                break;
+                            case 6:
+                                System.out.println("Наследственность");
+                                break;
+                            case 7:
+                                System.out.println("Возраст");
+                                break;
+                        }
                         data[i]= in.nextDouble();
                     }
-                    System.out.println(function(linear,data));
+                    System.out.println("Диагноз "+function(linear,data));
                     break;
                 case 4:
                     System.out.println("Введите количество циклов");
